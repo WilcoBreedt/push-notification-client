@@ -23,8 +23,4 @@ export class AppComponent {
 			.catch(console.error);
 		}
 	}
-
-	sendNotification() {
-		this.pushService.sendMessage();
-	}
 }
