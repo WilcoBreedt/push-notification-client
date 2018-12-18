@@ -23,10 +23,10 @@ export class AppComponent {
 			this.swPush.requestSubscription({
 				serverPublicKey: VAPID_PUBLIC
 			})
-				.then(subscription => {
-					this.pushService.sendSubscriptionToTheServer(subscription);
-				})
-				.catch(console.error);
+			.then(subscription => {
+				this.pushService.sendSubscriptionToTheServer(subscription).subscribe();
+			})
+			.catch(console.error);
 		}
 	}
 	sendPush() {
