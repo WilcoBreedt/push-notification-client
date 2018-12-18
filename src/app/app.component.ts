@@ -20,17 +20,13 @@ export class AppComponent {
 
 	enablePush() {
 		if (this.swPush.isEnabled) {
-			if (!this.swPush.subscription) {
-				this.swPush.requestSubscription({
-					serverPublicKey: VAPID_PUBLIC
-				})
+			this.swPush.requestSubscription({
+				serverPublicKey: VAPID_PUBLIC
+			})
 				.then(subscription => {
 					this.pushService.sendSubscriptionToTheServer(subscription);
 				})
 				.catch(console.error);
-			} else {
-				alert('Notifications are already enabled for you ! <3');
-			}
 		}
 	}
 	sendPush() {
