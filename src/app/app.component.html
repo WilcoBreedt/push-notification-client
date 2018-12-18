@@ -1,3 +1,5 @@
 <button (click)="enablePush()">Enable Push Notifications</button>
-<input [(ngModel)]="message" placeholder="Enter a message to send"/>
+<input [(ngModel)]="message" placeholder="Enter a message body to send"/>
+<input [(ngModel)]="title" placeholder="Enter a message title to send"/>
+<input [(ngModel)]="icon" placeholder="Link to icon to send"/>
 <button (click)="sendPush()">Send Push Notification</button>

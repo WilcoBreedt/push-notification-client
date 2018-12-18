@@ -11,8 +11,8 @@ export class PushNotificationService {
         return this.http.post(SERVER_URL + '/subscription', subscription);
     }
 
-    public sendPush(msg: String) {
-        let res  = this.http.post(SERVER_URL + '/sendNotification', msg).subscribe();
+    public sendPush(msg: String, icon: String, title: String) {
+        let res  = this.http.post(SERVER_URL + '/sendNotification', {msg, icon, title} ).subscribe();
         console.log(res);
         return res;
     }
