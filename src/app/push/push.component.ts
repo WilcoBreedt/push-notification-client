@@ -9,10 +9,6 @@ const VAPID_PUBLIC = 'BIGKUYhw3Ns4zYynxbrY72mzFVbPTSlsLb44pnmV-IeKz0RUFpZ8-8IGey
     templateUrl: 'push.component.html'
 })
 export class PushComponent {
-	title = '';
-	message = '';
-	icon = '';
-
 	constructor(private swPush: SwPush, private pushService: PushNotificationService) {
 	}
 
@@ -26,8 +22,5 @@ export class PushComponent {
 			})
 			.catch(console.error);
 		}
-	}
-	sendPush() {
-		this.pushService.sendPush(this.message, this.icon, this.title);
 	}
 }
