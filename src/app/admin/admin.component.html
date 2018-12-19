@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-12 col-md-6 mx-auto">
+        <span>* Indicates required fields</span>
+        <label class="w-100">Message Body *<input class="input input-sm form-control" [(ngModel)]="message" placeholder="Enter a message body to send" /></label>
+        <label class="w-100">Message Title *<input class="input input-sm form-control" [(ngModel)]="title" placeholder="Enter a message title to send" /></label>
+        <label class="w-100">Message Icon<input class="input input-sm form-control" [(ngModel)]="icon" placeholder="Link to icon to send" /></label>
+        <button class="btn btn-primary w-100"[disabled]="!message || !title" (click)="sendPush()">Send Push Notification</button>
+    </div>
+</div>
+<a style="position: fixed; bottom: 5px; left: 5px;" routerLink="/">register</a>
